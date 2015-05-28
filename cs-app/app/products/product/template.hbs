@@ -7,7 +7,8 @@
 <p>Cumque enim minus, necessitatibus neque provident quam quidem sed veniam.</p>
 <p>Aliquid hic inventore, mollitia nam quam quis quisquam! Natus, saepe!</p>
 <p>Beatae commodi, illo. Esse fugit, porro saepe soluta totam ullam?</p>
-
+<br/>
+<br/>
 {{#if model.reviews }}
   <h3>Reviews</h3>
 
@@ -16,4 +17,6 @@
       <li>{{review.text}}</li>
     {{/each}}
   </ul>
+{{else}}
+  <h4>No review yet, live one</h4>
 {{/if}}
