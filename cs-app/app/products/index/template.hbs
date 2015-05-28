@@ -1,7 +1,8 @@
 <h2>Products List</h2>
+<p>sudden {{someStrangeProperty}}</p>
 <ul>
-  {{#each model}}
-    <h2>{{#link-to "products.product" this}} {{id}} [{{price}} usd] {{title}}{{/link-to}}</h2>
+  {{#each controller}}
+    <h2>{{#link-to "products.product" this}} [{{price}} usd] {{title}}{{/link-to}}</h2>
     <p>{{description}}</p>
   {{/each}}
 </ul>

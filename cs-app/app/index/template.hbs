@@ -3,4 +3,19 @@
 <br/>
 <p>We have some products</p>
 <p>{{#link-to 'products' class='btn btn-primary' }}browse {{productCount}} products {{/link-to}}</p>
+
+<hr/>
+
+{{#if onSale}}
+  <h1>Big sale</h1>
+  <ul>
+    {{#each onSale}}
+      <li>
+        <h3>{{title}} - {{price}} USD</h3>
+        {{#link-to 'products.product' this class='btn btn-success'}}go to product{{/link-to}}
+      </li>
+    {{/each}}
+  </ul>
+{{/if}}
+
 {{outlet}}

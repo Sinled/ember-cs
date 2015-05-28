@@ -5,14 +5,14 @@ html {
 body {
   display: flex;
   height: 100%;
+  flex-direction: column;
 }
 
 .page {
   display: flex;
-  min-height: 100%;
-  overflow: hidden;
   position: relative;
   flex-direction: column;
+  flex: 1 0 auto;
 }
 
 .main {
