@@ -1,3 +1,4 @@
+'use strict';
 import Ember from 'ember';
 import config from './config/environment';
 
@@ -8,9 +9,8 @@ var Router = Ember.Router.extend({
 Router.map(function() {
   this.route('about');
 
-  
-  this.resource('products', function() {
-    this.resource('product', {path: "/:product_id"});
+  this.route('products', function() {
+    this.route('product', {path: '/:id'});
   });
 });
 

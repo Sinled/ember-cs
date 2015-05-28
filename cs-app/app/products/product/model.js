@@ -1,3 +1,4 @@
+'use strict';
 import DS from 'ember-data';
 
 const Product = DS.Model.extend({});
