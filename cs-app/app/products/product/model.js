@@ -2,11 +2,12 @@
 import DS from 'ember-data';
 
 let Product = DS.Model.extend({
-  title: DS.attr(),
-  price: DS.attr(),
-  description: DS.attr(),
-  isOnSale: DS.attr(),
-  image: DS.attr()
+  title: DS.attr('string'),
+  price: DS.attr('string'),
+  description: DS.attr('string'),
+  isOnSale: DS.attr('string'),
+  image: DS.attr('string'),
+  reviews: DS.hasMany('products.product.review', {async: true})
 });
 
 Product.reopenClass({
@@ -17,7 +18,8 @@ Product.reopenClass({
       price: 99,
       description: 'Flint is...',
       isOnSale: true,
-      image: 'flint.png'
+      image: 'flint.png',
+      reviews: [100, 101]
     },
     {
       id: 2,
@@ -25,7 +27,8 @@ Product.reopenClass({
       price: 249,
       description: 'Easily...',
       isOnSale: false,
-      image: 'kindling.png'
+      image: 'kindling.png',
+      reviews: []
     }
   ]
 });
