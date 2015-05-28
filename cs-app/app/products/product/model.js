@@ -1,7 +1,13 @@
 'use strict';
 import DS from 'ember-data';
 
-const Product = DS.Model.extend({});
+let Product = DS.Model.extend({
+  title: DS.attr(),
+  price: DS.attr(),
+  description: DS.attr(),
+  isOnSale: DS.attr(),
+  image: DS.attr()
+});
 
 Product.reopenClass({
   FIXTURES: [
