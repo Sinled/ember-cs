@@ -9,11 +9,7 @@ export default Ember.Controller.extend({
     });
   }.property('model'),
 
-  isNotReviewed: function() {
-    let isNew = this.get('review').get('isNew');
-    console.log('isNew', isNew);
-    return isNew;
-  }.property('review'),
+  isNotReviewed: Ember.computed.alias('review.isNew'),
 
   //isSaveDisabled: function() {
   //  return !this.get('review.text').length;
@@ -21,7 +17,7 @@ export default Ember.Controller.extend({
 
   actions: {
     createReview: function() {
-      this.get('review').set('reviewedAt', new Date().getTime()).save();
+      this.get('review').set('reviewedAt', new Date().getTime());
     }
   }
 });
