@@ -1,2 +1,12 @@
-<h3>{{product.title}} - {{product.price}} USD</h3>
-{{#link-to 'products.product' product class='btn btn-success'}}go to product{{/link-to}}
+<div class='col-sm-7'>
+  <h2>{{product.title}}</h2>
+
+  <p class='product-description'>{{product.description}}</p>
+
+  <p>{{#link-to 'products.product' product class='btn btn-success'}}
+    Buy for ${{product.price}}{{/link-to}}
+  </p>
+  {{#if reviewsCount}}
+    <p class='text-muted'>Read all reviews ({{reviewsCount}}).</p>
+  {{/if}}
+</div>

@@ -18,3 +18,12 @@ body {
 .main {
   flex: 1 0 auto;
 }
+
+.is-on-sale h2:after {
+  content: 'on sale';
+  display: inline-block;
+  background: lightgreen;
+  margin: 0 0 0 3px;
+  font-size: 50%;
+  padding: 3px;
+}

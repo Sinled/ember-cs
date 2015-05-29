@@ -11,7 +11,7 @@
   <h1>Big sale</h1>
     <div class="row">
     {{#each onSale as |product|}}
-      {{product-details product = product class='col-sm-4'}}
+      {{product-details product = product class='col-sm-4' tagName='div'}}
     {{/each}}
     </div>
 {{/if}}
