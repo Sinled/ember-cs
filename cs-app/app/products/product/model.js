@@ -7,7 +7,7 @@ let Product = DS.Model.extend({
   description: DS.attr('string'),
   isOnSale: DS.attr('string'),
   image: DS.attr('string'),
-  reviews: DS.hasMany('products.product.review', {async: true}),
+  reviews: DS.hasMany('products.product.reviews.review', {async: true})
 });
 
 Product.reopenClass({

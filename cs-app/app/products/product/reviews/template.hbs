@@ -1,9 +1,10 @@
-{{#if model.reviews }}
+
+{{#if hasReviews }}
   <h3>Reviews</h3>
 
   <ul>
-    {{#each review in model.reviews}}
-      <li>{{review.text}}</li>
+    {{#each}}
+      <li>{{text}}</li>
     {{/each}}
   </ul>
 {{else}}
