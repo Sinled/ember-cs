@@ -11,6 +11,7 @@ Router.map(function() {
 
   this.route('products', function() {
     this.route('product', {path: '/:id'});
+    this.route('onSale');
   });
 });
 
