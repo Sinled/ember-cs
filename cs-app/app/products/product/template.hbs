@@ -9,13 +9,16 @@
 <br/>
 <br/>
 {{render 'products.product.reviews' model.reviews}}
-<div class='new-review'>
-  <h3>Review {{title}}</h3>
-  {{#if reviewText}}
-    <p class='text-muted'>{{reviewText}}</p>
-  {{/if}}
-  <div>
-    {{textarea value=reviewText cols=50 rows=5}}
+
+{{#if isNotReviewed }}
+  <div class='new-review'>
+    <h3>Review {{title}}</h3>
+    {{#if review.text}}
+      <p class='text-muted'>{{review.text}}</p>
+    {{/if}}
+    <div>
+      {{textarea value=review.text cols=50 rows=5}}
+    </div>
+    <button {{action 'createReview'}} class='btn btn-primary' >Review</button>
   </div>
-  <button {{action 'createReview'}} class='btn btn-primary' {{bind-attr disabled=isSaveDisabled}}>Review</button>
-</div>
+{{/if}}
