@@ -9,14 +9,11 @@
 
 {{#if onSale}}
   <h1>Big sale</h1>
-  <ul>
-    {{#each onSale}}
-      <li>
-        <h3>{{title}} - {{price}} USD</h3>
-        {{#link-to 'products.product' this class='btn btn-success'}}go to product{{/link-to}}
-      </li>
+    <div class="row">
+    {{#each onSale as |product|}}
+      {{product-details product = product class='col-sm-4'}}
     {{/each}}
-  </ul>
+    </div>
 {{/if}}
 
 {{outlet}}

@@ -1,7 +1,6 @@
 <h2>Products On Sale </h2>
-<ul>
-  {{#each onSale}}
-    <h2>{{#link-to "products.product" this}} [{{price}} usd] {{title}}{{/link-to}}</h2>
-    <p>{{description}}</p>
+<ul class="list-unstyled" >
+  {{#each product in onSale}}
+    {{product-details product = product class='row' tagName='li'}}
   {{/each}}
 </ul>
