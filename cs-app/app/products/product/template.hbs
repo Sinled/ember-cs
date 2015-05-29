@@ -8,14 +8,4 @@
 <p>Beatae commodi, illo. Esse fugit, porro saepe soluta totam ullam?</p>
 <br/>
 <br/>
-{{#if model.reviews }}
-  <h3>Reviews</h3>
-
-  <ul>
-    {{#each review in model.reviews}}
-      <li>{{review.text}}</li>
-    {{/each}}
-  </ul>
-{{else}}
-  <h4>No review yet, live one</h4>
-{{/if}}
+{{item-reviews model = model class='reviews'}}
