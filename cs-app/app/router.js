@@ -10,8 +10,8 @@ Router.map(function() {
   this.route('about');
   this.route('test');
 
-  this.route('products', function() {
-    this.route('product', {path: '/:id'});
+  this.resource('products', function() {
+    this.resource('product', {path: '/:id'});
     this.route('onSale');
   });
   this.route('test');
