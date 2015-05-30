@@ -3,6 +3,7 @@
 module.exports = function(environment) {
   var ENV = {
     modulePrefix: 'cs-app',
+    podModulePrefix: 'cs-app/pods',
     environment: environment,
     baseURL: '/',
     locationType: 'auto',
