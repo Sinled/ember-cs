@@ -1,19 +1,19 @@
 var REVIEWS = [
   {
     id: 100,
-    reviewedAt: new Date('12/10/2013').getTime(),
+    reviewedAt: new Date('12/10/2013'),
     text: 'Started a fire in no time!',
     rating: 4
   },
   {
     id: 101,
-    reviewedAt: new Date('12/12/2013').getTime(),
+    reviewedAt: new Date('12/12/2013'),
     text: 'Not the brightest flame, but warm!',
     rating: 5
   },
   {
     id: 102,
-    reviewedAt: new Date('12/30/2013').getTime(),
+    reviewedAt: new Date('12/30/2013'),
     text: 'This is some amazing Flint! It lasts **forever** and works even when damp! I still ' +
     'remember the first day when I was only a little fire sprite and got one of these in my flame' +
     ' stalking for treemas. My eyes lit up the moment I tried it! Here\'s just a few uses for it:\n\n*' +
